@@ -1,7 +1,7 @@
 <?php 
 $slogan = "Mi chiamo Gabriele, ho 23 anni e vivo a Latina";
 
-echo str_replace("Gabriele", "***", $slogan)
+$censored_slogan = str_replace("Gabriele", "***", $slogan);
 
 
 ?>
@@ -14,7 +14,11 @@ echo str_replace("Gabriele", "***", $slogan)
     <title>Document</title>
 </head>
 <body>
-    <h1><?= $slogan ?></h1>
+    <h2>Frase non censurata:</h2>
+    <p><?= $slogan ?></p>
     <span><?= strlen($slogan) ?></span>
+    <h2>Frase censurata:</h2>
+    <p><?= $censored_slogan ?></p>
+    <span><?= strlen($censored_slogan) ?></span>
 </body>
 </html>
