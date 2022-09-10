@@ -1,7 +1,8 @@
 <?php 
 $slogan = "Mi chiamo Gabriele, ho 23 anni e vivo a Latina";
+$censored_word = $_GET ['censored_word'] ?? '';
 
-$censored_slogan = str_replace("Gabriele", "***", $slogan);
+$censored_slogan = str_replace($censored_word, "***", $slogan);
 
 
 ?>
